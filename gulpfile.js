@@ -37,6 +37,7 @@ gulp.task('css-lib', ['sass'], function() {
             './src/css/slick-theme.css'
         ])
         .pipe(cssnano())
+        .pipe(concat('libs.css'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./src/css'));
 });
